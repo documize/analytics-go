@@ -10,7 +10,7 @@ import (
 )
 
 const (
-	recordEventURL = "http://localhost:4000/api-public/a/r" // https://api.zerabase.com/api-public
+	recordEventURL = "https://api.zerabase.com/api-public/a/r"
 )
 
 var client *http.Client
