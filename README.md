@@ -3,5 +3,5 @@
 Send app analytics to Zerabase.
 
 ```
-go analytics.RecordEvent("your-tracker-id")
+analytics.RecordEvent("your-tracker-id")
 ```
