@@ -1,2 +1,7 @@
-# analytics-go
-Analytics module for Zerabase written in Go
+# Zerabase analytics module for Go
+
+Send app analytics to Zerabase.
+
+```
+    go analytics.RecordEvent("Pj7yb47y60yVqQaMVniY")
+```
