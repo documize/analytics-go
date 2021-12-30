@@ -12,8 +12,8 @@ Send app analytics from your Go app.
 
 1. Create a Metric within Zerabase.
 2. Note the Tracker ID for the Metric.
-3. ```go get github.com/documize/analytics-go``` module and invoke as follows:
+3. ```go get github.com/documize/zerabase-go``` module and invoke as follows:
 
 ```
-analytics.RecordEvent("your-tracker-id")
+metric.TrackEvent("your-tracker-id")
 ```
