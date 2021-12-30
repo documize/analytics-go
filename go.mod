@@ -1,3 +1,3 @@
-module github.com/documize/analytics-go
+module github.com/documize/zerabase-go
 
 go 1.17

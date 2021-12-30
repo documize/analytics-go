@@ -1,11 +1,11 @@
-package event
+package metric
 
 import (
 	"errors"
 	"strings"
 	"time"
 
-	"github.com/documize/analytics-go/transport"
+	"github.com/documize/zerabase-go/transport"
 )
 
 type Event struct {
@@ -13,15 +13,15 @@ type Event struct {
 	Date      int64  `json:"date"`
 }
 
-// Record event occurrence.
-func Record(e Event) (err error) {
+// TrackEvent records metric occurrence.
+func TrackEvent(e Event) (err error) {
 	// Validate data
 	e.TrackerID = strings.TrimSpace(e.TrackerID)
 	if len(e.TrackerID) == 0 {
 		return errors.New("missing TrackerID")
 	}
 	if e.Date == 0 || time.Unix(e.Date, 0).IsZero() {
-		return errors.New("missing Date (epoch value)")
+		e.Date = time.Now().UTC().Unix()
 	}
 
 	err = transport.SendEvent(e)
