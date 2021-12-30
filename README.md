@@ -1,12 +1,14 @@
-# Zerabase Analytics Collector
+# Zerabase Go Library
 
 Zerabase provides a system-of-record for your products by unifying product deliver, customer conversations and app
 analytics.
 
-This module is for Go based applications that need to send analytics into Zerabase. For example, record user sign-up,
-customer purchase, etc.
+This module is for Go based applications that need to send app analytics and customer interactions into Zerabase. For
+example, record user sign-up, customer purchase, contact form, downloaded, etc.
 
 ## Usage
+
+## App Analytics
 
 Send app analytics from your Go app.
 
@@ -17,3 +19,7 @@ Send app analytics from your Go app.
 ```
 metric.TrackEvent("your-tracker-id")
 ```
+
+## Customer Interactions
+
+Coming soon.
